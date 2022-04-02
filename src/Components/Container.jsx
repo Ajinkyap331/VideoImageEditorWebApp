@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { ImageHandler } from './ImageUpload'
-import { TextFile } from './TextUpload'
+import { ImageHandler } from './Uploads/ImageUpload'
+import { TextFile } from './Uploads/TextUpload'
 import './Container.css'
-import { CreateAudio } from './CreateAudio'
-import { MergeImageAudio } from './MergeImageAudio'
-import { MergeVideoAudio } from './MergeVideoAudio'
+import { CreateAudio } from './Uploads/CreateAudio'
+import { MergeImageAudio } from './Uploads/MergeImageAudio'
+import { MergeVideoAudio } from './Uploads/MergeVideoAudio'
 
 export const Container1 = ({ setvideo, videoarray, setProgress }) => {
 

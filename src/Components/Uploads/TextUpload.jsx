@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Download } from './Download'
+import { Download } from '../Download'
 export const TextFile = ({ data, setdata, setProgress }) => {
 
 
@@ -13,10 +13,7 @@ export const TextFile = ({ data, setdata, setProgress }) => {
             url: "https://video-editor-api.herokuapp.com/upload_file",
             method: "post",
             data: formdata
-        }).then(e => {setdata({ ...data, text: e.data.file_path }); setProgress(100)}).catch(
-            setProgress(100)
-        )
-        
+        }).then(e => {setdata({ ...data, text: e.data.file_path }); setProgress(100)})
     }
 
     return (

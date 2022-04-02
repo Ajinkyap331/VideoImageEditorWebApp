@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import './Components.css'
-import { Download } from './Download'
+import { Download } from '../Download'
 
 export const ImageHandler = ({ data, setdata, setProgress, text }) => {
 
@@ -15,9 +15,7 @@ export const ImageHandler = ({ data, setdata, setProgress, text }) => {
             url: "https://video-editor-api.herokuapp.com/upload_file",
             method: "post",
             data: formdata
-        }).then(e => { setProgress(100); setdata({ ...data, "image": e.data.file_path }) }).catch(
-            setProgress(100)
-        )
+        }).then(e => { setProgress(100); setdata({ ...data, "image": e.data.file_path }) })
 
     }
 

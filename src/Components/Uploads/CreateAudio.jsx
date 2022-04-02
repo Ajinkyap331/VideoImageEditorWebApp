@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-import { Download } from './Download'
+import { Download } from '../Download'
 
 export const CreateAudio = ({ data, setdata, setProgress }) => {
 
@@ -13,9 +13,7 @@ export const CreateAudio = ({ data, setdata, setProgress }) => {
             url: "https://video-editor-api.herokuapp.com/text_file_to_audio",
             method: "post",
             data: formdata
-        }).then(e => {setProgress(100); console.log(e); setdata({ ...data, audio: e.data.audio_file_path }) }).catch(
-            setProgress(100)
-        )
+        }).then(e => {setProgress(100); console.log(e); setdata({ ...data, audio: e.data.audio_file_path }) })
         
     }
 
